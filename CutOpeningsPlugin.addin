@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RevitAddIns>
+	<AddIn Type="Application">
+	<Name>Cut Openings</Name>
+	<Assembly>CutOpeningsPlugin.dll</Assembly>
+	<AddInId>5436F312-663B-477A-82F7-7217B2A327BF</AddInId>
+	<FullClassName>CutOpeningsPlugin.Application</FullClassName>
+	<VendorId>VendorId</VendorId>
+	<VendorDescription></VendorDescription>
+	</AddIn>
+</RevitAddIns>
+
+

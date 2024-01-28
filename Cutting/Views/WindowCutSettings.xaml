@@ -1,0 +1,76 @@
+﻿<Window x:Class="CutOpeningsPlugin.Cutting.Views.WindowCutSettings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:local="clr-namespace:CutOpeningsPlugin.Cutting.Views"
+        mc:Ignorable="d" 
+        Title="Вырезание геометрии"
+        Height="250" 
+        MinHeight="250"
+        Width="220"
+        MinWidth="220"
+        MaxWidth="400"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Center" 
+                   Grid.Row="0"
+                   Grid.Column="0"
+                   TextWrapping="Wrap" 
+                   Text="Список категорий" 
+                   VerticalAlignment="Center">
+            <TextBlock.ToolTip>
+                <ToolTip>
+                        Список категорий элементов в пространстве модели. 
+                        Если не выбрана ни одна из представленных категорий,
+                        вырезание геометрии производится из стен и перекрытий.
+                </ToolTip>
+            </TextBlock.ToolTip>
+        </TextBlock>
+        <StackPanel x:Name="StPanCategories" 
+                    Grid.Row="1" 
+                    Grid.Column="0"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                    Margin="5"
+                    CanVerticallyScroll="True"
+                    ScrollViewer.VerticalScrollBarVisibility="Auto">
+        </StackPanel>
+        <Button x:Name="BtnCutAll"
+                Content="Вырезать" 
+                Grid.Row = "2"
+                Grid.Column="0"
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center"
+                Width="85" 
+                Click="BtnCutAll_Click" >
+            <Button.ToolTip>
+                <ToolTip>
+                    Вырезание геометрии из элементов выбранных категорий.
+                </ToolTip>
+            </Button.ToolTip>
+        </Button>
+        <Button x:Name="BtnCutSelect"
+                Content="Вырезать из..." 
+                Grid.Row = "3"
+                Grid.Column="0"
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center"
+                Width="85" 
+                Click="BtnCutSelect_Click" >
+            <Button.ToolTip>
+                <ToolTip>
+                    Выбор геометрического элемента для вырезания.
+                </ToolTip>
+            </Button.ToolTip>
+        </Button>
+    </Grid>
+</Window>
